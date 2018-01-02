@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Instagramaroro</title>
+  </head>
+  <body>
+    <h1>HI Instagramer</h1>
+    <table class="table">
+
+    <% @posts.each do |p|%>
+    <tr>
+     <td>title: <%=p.title%></td>
+     <td>username: <%=p.username%></td>
+     <td>content: <%=p.content%> </td>
+   </tr>
+    <%end%>
+  </table>
+    <a href="/posts/new"><button type="button" class="btn btn-info">new</button></a>
+    <a href="/posts/read"><button type="button" class="btn btn-info">show</button></a>
+  </body>
+</html>
