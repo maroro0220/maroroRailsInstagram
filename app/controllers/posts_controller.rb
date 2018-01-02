@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def read
+    @post=Post.find(params[:id])
   end
 
   def edit

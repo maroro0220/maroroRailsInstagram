@@ -13,10 +13,11 @@
      <td>title: <%=p.title%></td>
      <td>username: <%=p.username%></td>
      <td>content: <%=p.content%> </td>
+     <td><a href="/posts/<%=p.id%>"><button type="button" class="btn btn-info">show</button></a></td>
+     <td><a href="/posts/<%=p.id%>/edit"><button type="button" class="btn btn-info">Edit</button></a></td>
    </tr>
     <%end%>
   </table>
     <a href="/posts/new"><button type="button" class="btn btn-info">new</button></a>
-    <a href="/posts/read"><button type="button" class="btn btn-info">show</button></a>
   </body>
 </html>
