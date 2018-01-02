@@ -1,4 +1,4 @@
-<form action = "/posts" method="post">
+<!-- <form action = "/posts" method="post">
   <div class="form-group">
     <label for="exampleFormControlInput1">Title</label>
     <input type="text" class="form-control"  placeholder="Title" name="title">
@@ -11,4 +11,12 @@
   </div>
   <input type="hidden" name="authenticity_token"  value="<%= form_authenticity_token %>"/><br />
   <input type="submit" name="submit" value="submit">
-</form>
+</form> -->
+
+
+<%= form_tag("/posts", method: "post", multipart: true) do %>
+  <%= text_field_tag("post[title]") %> <br />
+  <%= text_area_tag("post[content]") %> <br />
+  <%= file_field_tag("post[postimage]") %><br />
+  <%= submit_tag %>
+<% end %>

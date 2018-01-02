@@ -1,5 +1,5 @@
-<form  action="/posts/<%=@post.id%>" method="post">
-  <!--  PUT할 때 꼮 POST로 써줘야함-->
+<!-- <form  action="/posts/<%=@post.id%>" method="post">
+  <!-  PUT할 때 꼮 POST로 써줘야함-->
   <div class="form-group">
     <label for="exampleFormControlInput1">Title</label>
     <input type="text" class="form-control"  value="<%=@post.title%>" name="title">
@@ -14,4 +14,10 @@
   <input type="hidden" name="_method"  value="put"/><br />
   <a href="/"><button type="button" class="btn btn-info">Home</button></a>
   <input type="submit" value="edit">
-</form>
+</form> -->
+
+<%= form_tag("/posts", method: "post") do %>
+  <%=text_field_tag("post[title]",@post.title)%>
+  <%=text_area_tag("post[content]",@post.content)%>
+  <%=submit_tag%>
+<%end%>

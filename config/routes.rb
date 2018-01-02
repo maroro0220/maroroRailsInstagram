@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  resources :blogs
   root 'posts#index'
-  #index
+
+  #rake route???
+  # resourece :posts #아래 주석하고 하면 내가 가진 경로들 다 볼 수 있음
+  # index
   get '/posts' => 'posts#index'
 
   #Create
