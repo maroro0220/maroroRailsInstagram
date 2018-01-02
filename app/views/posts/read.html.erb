@@ -10,5 +10,7 @@
     <textarea class="form-control" rows="3" name="content" disabled><%=@post.content%></textarea>
   </div>
     <a href="/"><button type="button" class="btn btn-info">Home</button></a>
-    <input type="submit" value="edit">
+    <input class="btn btn-info" type="submit" value="edit">
+     <a href="/posts/<%=@post.id%>" data-confirm="Are you sure?" data-method="delete"><button type="button" class="btn btn-info">Delete</button></a>
+
 </form>
