@@ -1,5 +1,5 @@
-<form>
-  <div class="form-group" actio>
+<form action="/posts/<%=@post.id%>/edit">
+  <div class="form-group">
     <label for="exampleFormControlInput1">Title</label>
     <input type="text" class="form-control"  value="<%=@post.title%>" name="title" disabled>
     <label for="exampleFormControlInput1">Username</label>

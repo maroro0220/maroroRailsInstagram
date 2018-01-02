@@ -16,12 +16,17 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post=Post.find(params[:id])
   end
 
   def update
+    post=Post.find(params[:id])
+    post.update(title: params[:title], content: params[:content])
+    redirect_to '/'
   end
 
   def delete
+    
   end
 
 end
